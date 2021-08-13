@@ -7,7 +7,7 @@
 apply plugin: 'java'
 
 group = 'com.ca.apim.gateway.assertion'
-version = 'sdk811-2.0-2560'
+version = '1.1.0'
 
 description = "TODO"
 jar.baseName = 'InjectionFilterAssertion'

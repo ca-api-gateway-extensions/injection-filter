@@ -143,9 +143,11 @@ class InjectionFilterAssertionDialog extends JDialog implements AssertionEditor 
         for (final Map.Entry<String, byte[]> entry : injectionFilterByteMap.entrySet()) {
             final String key = entry.getKey();
             final InjectionFilterEntity entity = serializer.deserialize(entry.getValue());
-            comboBoxItem = new FilterComboBoxItem(key, entity);
-            filterComboBox.addItem(comboBoxItem);
-            keyToFilterMap.put(key, comboBoxItem);
+            if (entity != null) {
+                comboBoxItem = new FilterComboBoxItem(key, entity);
+                filterComboBox.addItem(comboBoxItem);
+                keyToFilterMap.put(key, comboBoxItem);
+            }
         }
     }
 

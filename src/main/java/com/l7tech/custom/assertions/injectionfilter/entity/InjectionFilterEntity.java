@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class InjectionFilterEntity implements Serializable {
+    private static final long serialVersionUID = 3231009958979046483L;
 
     private String filterName;
     private String description;
